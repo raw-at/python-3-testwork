@@ -54,4 +54,29 @@ exampleVar = print('whoa');
 x,y = (3,5)
 print("x-axis",x,"y-axis",y);
 
+''' while loop '''
 
+condition = 1
+while condition<10:
+    print(condition);
+    condition+=1;
+
+'''
+#Infinte loop
+while True:
+    print('doing stuff');
+''' 
+
+''' For Loop '''
+
+#use to iterate through the list
+
+exampleList = [1,2,3,54,6,5,4,60]
+for i in exampleList:
+    print(i);
+
+print('continue program ');
+
+#range upto last number
+for x in range(1,11):
+    print(x);
