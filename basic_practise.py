@@ -80,3 +80,64 @@ print('continue program ');
 #range upto last number
 for x in range(1,11):
     print(x);
+
+
+''' If statement '''
+
+x = 5
+y = 8
+z = 5
+a = 3
+if(x<y):
+    print('x is lesser than y')
+
+if(z<y>x>a):
+    print('y is greater than z and the greater than x');
+
+if z<=x:
+    print('z is less than or eqaul to x');
+
+if  z == x:
+    print('z is equal to x');    
+
+if z != y:
+    print('z is not equal to y')
+
+''' if else '''
+
+if(x>y):
+    print('X is greater than y')
+else:
+    print('X is lesser than y');
+
+if x>y:
+    print('X is greater than y');
+if x<y:
+    print('X is lesser than y');
+if x==y:
+    print('x is equal to y');
+else:
+    print('ok ok');
+
+''' elif Else '''
+x = 5
+y = 10
+z = 22
+if x>y:
+    print('x is greater than y')
+elif x<z:
+    print('x is lesss than z')
+elif 5>2:
+    print('5 is greater than 2')
+else:
+    print('if and elif never run'); 
+
+
+
+
+
+
+
+
+
+
