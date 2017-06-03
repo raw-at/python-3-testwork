@@ -133,8 +133,40 @@ else:
     print('if and elif never run'); 
 
 
+''' function '''
+def example():
+    print('hello this from a example')
+    z = 3+9
+    print(z)
+
+example();
 
 
+''' functions with the parameter '''
+def sum(a,b):
+    ans = a+b;
+    return ans
+
+print(sum(2,3))
+
+''' function with the default parameters '''
+
+def simple(num1,num2):
+    pass
+
+def simple(num1,num2 = 5):
+    print(num1,num2)
+
+simple(5)
+
+
+def window(width,height,font="TNR",
+            bgcolor="white",scrollbar=True):
+
+            print(width,height,font,bgcolor)
+    
+window(23,25,bgcolor='W');
+    
 
 
 
