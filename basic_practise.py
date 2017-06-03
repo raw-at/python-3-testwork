@@ -41,3 +41,17 @@ print(5/34);
 
 #power operation
 print(4**4);
+
+''' Variables '''
+
+exampleVar = 53;
+print(exampleVar);
+
+#variable having function
+exampleVar = print('whoa');
+
+#unpacking into variables
+x,y = (3,5)
+print("x-axis",x,"y-axis",y);
+
+
