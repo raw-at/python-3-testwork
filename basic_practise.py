@@ -166,9 +166,29 @@ def window(width,height,font="TNR",
             print(width,height,font,bgcolor)
     
 window(23,25,bgcolor='W');
+
     
 
+''' Global and local variable '''
 
+x = 6
+
+def example():
+    global x #this makes x a global variable
+    print(x)
+    print(x+5)
+    x+=6 #x is not a global variable here
+example()
+
+
+#without using global variable
+print(x)
+def notGlobal():
+    globx = x;
+    globx += 5;
+    return globx
+x = notGlobal()
+print(x)
 
 
 
