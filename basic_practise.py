@@ -20,3 +20,24 @@ print(int('13')+5);
 
 #float conversion
 print(float('8.5')+4);
+
+#Maths + - * / 
+
+''' This is for multiple line comment 
+We can put multiple comments here
+'''
+
+#Add operation 
+print(1+3);
+
+#Subtraction
+print(3-1);
+
+#Multiplication
+print(4*4);
+
+#Division this give decimal value 
+print(5/34);
+
+#power operation
+print(4**4);
