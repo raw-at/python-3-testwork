@@ -186,9 +186,36 @@ print(x)
 def notGlobal():
     globx = x;
     globx += 5;
-    return globx
 x = notGlobal()
 print(x)
+
+''' Writing to a file '''
+text = "Sample text to save\nNew line!"
+
+saveFile = open('exampleFile.txt','w')
+
+saveFile.write(text);
+
+saveFile.close();
+
+''' Appending to a file '''
+newText = "\n Appended data from the user"
+appendFile = open('exampleFile.txt','a');
+appendFile.write(newText);
+appendFile.close();
+
+''' Reading from a file '''
+
+# this read function gets whole data and put to the readme variable
+readMe = open('exampleFile.txt','r').read();
+print(readMe);
+
+#getting in form of list using
+readMeList = open('exampleFile.txt','r').readlines();
+print(readMeList);
+
+
+
 
 
 
