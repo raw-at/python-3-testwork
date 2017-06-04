@@ -1,13 +1,13 @@
 class Cars:
     #class variables hold by all the instances
     mileage = 12
-
+    
     def  __init__(self,brand,model,price):
         self.brand = brand
         self.model = model
         self.price = price
     
-    @classmethod 
+    @classmethod  
     def mileage_booster_fuel(cls,new_mileage):
         cls.mileage = new_mileage
     
@@ -56,3 +56,4 @@ class C(A,B):
         super().__init__()
 
 c = C()
+

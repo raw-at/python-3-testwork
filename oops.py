@@ -11,8 +11,25 @@ class Employee:
        self.pay = pay
        self.email = first+'.'+last+'@company.com'
        Employee.no_of_employee += 1
+
+    def __repr__(self):
+        return "Employee({},{},{})".format(self.first,self.last,self.pay)
+
+    def __str__(self):
+        return "{}-{}".format(self.fullname(),self.email)
+    
+    def __add__(self,other):
+        return self.pay + other.pay
+
+
     def fullname(self):
-        print('{}{}'.format(self.first,self.last))
+        return '{}{}'.format(self.first,self.last)
+
+    def __len__(self):
+        return len(self.fullname())
+    
+    def __mul__(self,other):
+        return self.pay * other.pay
 
     ''' Class Variables '''
 
@@ -155,7 +172,7 @@ class Manager(Employee):
     def print_emp(self):
         for emp in self.empolyees:
             print('-->',emp.fullname());
-
+        
 
 mgr_1 = Manager('SUE','SMITH',90000,[dev_1])
 print(mgr_1.email)
@@ -176,7 +193,16 @@ print(issubclass(Manager,Employee));
 print(issubclass(Manager,Developer));
 
 
+''' SPecial Methods '''
 
+print(emp_1);
+emp_1.__str__();
+emp_1.__repr__();
 
+print(1+2)
+print(int.__add__(1,2))
+print(emp_1+emp_2) #equalivalent to emp1.__add__(emp_2)
+print(emp_1.__add__(emp_2));
 
-
+print(len(emp_1));
+print(emp_1*emp_2);
