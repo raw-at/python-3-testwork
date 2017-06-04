@@ -35,5 +35,24 @@ print('Mileage:',car_2.mileage)
 
 
 
+''' Inheritance '''
+class X:
+    def __init__(self):
+        print('X')
 
-        
+class A(X):
+    def __init__(self):
+        print('A')                
+        super().__init__()
+class B(X):
+    def __init__(self):
+        print('B')
+        super().__init__()
+
+    
+class C(A,B):
+    def __init__(self):
+        print('C')
+        super().__init__()
+
+c = C()
