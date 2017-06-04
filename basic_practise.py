@@ -214,9 +214,20 @@ print(readMe);
 readMeList = open('exampleFile.txt','r').readlines();
 print(readMeList);
 
+''' class '''
+ 
+class calculator:
 
-
-
+    def addition(x,y):
+        print(x+y)
+    def substraction(x,y):
+        print(x-y)
+    def mul(x,y):
+        print(x*y)
+    def div(x,y):
+        print(x/y)
+    
+calculator.mul(3,5)
 
 
 
