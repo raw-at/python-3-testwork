@@ -113,20 +113,67 @@ print(Student.is_workeday(my_date));
 
 
 
+''' Inheritance '''
+
+class Developer(Employee):
+    raise_amount = 1.10
+
+    def __init__(self,first,last,pay,prog_lang):
+        super().__init__(first,last,pay) #call init of parent
+        #Employee.__init__(first,last,pay) -->Another method
+        self.prog_lang = prog_lang
 
 
+dev_1 = Developer('Corey','Schafer',50000,'Python');
+dev_2 = Developer('Test','User',70000,'JS');
+
+print(dev_1.email);
+print(dev_1.prog_lang);
+
+#print(dev_1.pay)
+#dev_1.apply_raise()
+#print(dev_1.pay)
 
 
+class Manager(Employee):
+    def __init__(self,first,last,pay,empolyees=None):
+        super().__init__(first,last,pay)
+        if empolyees is None:
+            self.empolyees = []
+        else:
+            self.empolyees = empolyees
+
+    
+    def add_emp(self,emp):
+        if emp not in self.empolyees:
+            self.empolyees.append(emp)
+
+    def remove_emp(self,emp):
+        if emp in self.empolyees:
+            self.empolyees.remove(emp)
+    
+    def print_emp(self):
+        for emp in self.empolyees:
+            print('-->',emp.fullname());
 
 
+mgr_1 = Manager('SUE','SMITH',90000,[dev_1])
+print(mgr_1.email)
+print(mgr_1.print_emp())
+
+mgr_1.add_emp(dev_2);
+print(mgr_1.print_emp())
+
+mgr_1.remove_emp(dev_1);
+print(mgr_1.print_emp())
 
 
+print(isinstance(mgr_1,Manager));
+print(isinstance(mgr_1,Employee));
+print(isinstance(mgr_1,Developer));
 
-
-
-
-
-
+print(issubclass(Manager,Employee));
+print(issubclass(Manager,Developer));
 
 
 
