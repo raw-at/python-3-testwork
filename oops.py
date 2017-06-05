@@ -308,8 +308,86 @@ finally:  #always run weither exception raise or not
 
 
 
+try:
+    name = input('enter the name:')
+    if(name == 'Abhinav'):
+        raise Exception
+except Exception:
+    print('Error !Abhinav is not allowed')
+else:
+    print('Everything works fine')
+finally:
+    print("Insertion process is already started!")
 
 
+''' Duck Typing and Eaiser for asking forgiveness ,Not Permission(EAPP)'''
+
+ 
+class Duck:
+    def quack(self):
+        print('Quack','quack')
+    
+    def fly(self):
+        print('Flap','flap')
+
+
+class Person:
+    def quack(self):
+        print('I am quaking like a duck ')
+    
+    def fly(self):
+        print("I'm Flapping my Arms!")
+    
+
+def quack_and_fly(thing):
+    '''LBYL(LOOK BEFORE YOU LEAD) Non-pythonic '''
+    if hasattr(thing,'quack'):
+        if callable(thing.quack):
+            thing.quack()
+
+    if hasattr(thing,'fly'):
+        if callable(thing.fly):
+            thing.fly()            
+
+    ''' EAFP Easier to ask forgiveness than permission'''
+    try:
+        thing.fly()
+        thing.quack()
+    except Exception as e:
+        print(e)
+
+
+#    thing.quack()
+#    thing.fly()
+    '''
+    if isinstance(thing,Duck):
+        thing.quack()
+        thing.fly()
+    else:
+        print('This has to be a duck')
+    '''
+    print()
+
+d = Duck()
+quack_and_fly(d)
+
+p = Person()
+quack_and_fly(p)
+
+'''  EAFP another example '''
+
+my_list = [1,2,3,4,6]
+#Non-Pythonic way (Asking permission)
+if(len(my_list)>=6):
+    print(my_list[5])
+else:
+    print('THat index not exist')
+
+#Pythonic way
+try:
+    print(my_list[5])
+except IndexError as e:
+    print(e)
 
 
 
