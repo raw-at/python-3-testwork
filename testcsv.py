@@ -6,3 +6,4 @@ with open('FL_insurance_sample.csv') as csvfile:
     
     for row in readCsv:
         print(row[-2])
+
