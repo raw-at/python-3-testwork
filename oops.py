@@ -206,3 +206,8 @@ print(emp_1.__add__(emp_2));
 
 print(len(emp_1));
 print(emp_1*emp_2);
+
+def epic():
+    print('SUch a great module')
+if __name__ == '__main__':
+    print('such awesome')
