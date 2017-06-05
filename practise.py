@@ -57,3 +57,4 @@ class C(A,B):
 
 c = C()
 
+        

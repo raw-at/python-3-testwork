@@ -211,3 +211,96 @@ def epic():
     print('SUch a great module')
 if __name__ == '__main__':
     print('such awesome')
+
+    '''user input '''
+
+#x = input('What is your name? ')
+#print(type(x))
+#print('Hello',x)
+
+''' Statistics Module '''
+
+import statistics as s
+from statistics import variance as v
+
+example_list = [4,6,2,6,7,8,2,5,6,4,5,6,5,6,25]
+x = s.mean(example_list)
+y = s.mode(example_list)
+z = s.median(example_list)
+a = s.stdev(example_list)
+#only variance
+b = v(example_list)
+
+
+print('Mean: ',x)
+print('Mode: ',y)
+print('Median: ',z)
+print('Standard Deviation: ',a)
+print('Variance: ',b)
+
+#for import everything from module 
+#from statistics import *
+
+''' LIST VS TUPLE '''
+#tuple are immutable cannot be changed one defined
+#list can be changes after defination also
+
+x = 5,6,7,8 #tuple
+y = [5,6,7,8] #list
+print(x)
+print(y)
+
+
+''' list manipulation '''
+x = [56,2,5,4,1,3,6,52,1,3,6]
+y = ['Jes','joe','bob','alen']
+x.append(20)
+#insert(where,what)
+x.insert(2,99)
+x.remove(2)
+x.remove(x[2])
+print(x)
+print(x[5:7])
+
+print(x.index(1))
+print(x.count(6))
+print(x)
+x.sort()
+print(x)
+y.sort()
+print(y)
+
+''' 2D list '''
+
+x = [[5,6],[6,7],[7,2],[2,5]]
+
+print(x[1][0])
+
+''' 3d list '''
+y = [
+        [
+            [5,4],[1,2],[56,2],[2,3]
+
+        ],
+        [
+            [2.50,25],[25,3],[8,25],[2,6]
+        ]
+]
+
+print(y[0][1][1])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
