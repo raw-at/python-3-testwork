@@ -390,11 +390,32 @@ except IndexError as e:
     print(e)
 
 
+''' Multi line print '''
+print(''' 
+    Awesome Work today
+    I work whole day
+
+''')
 
 
+# Dictonaries 
+purse = {'money':['$',2],'cards':5,'comb':1}
+print(purse)
 
+#reading key and value at same time
+for k,v in purse.items():
+    print('Key: ',k,' Value:',v)
+ 
+#putting in dict
+purse['bills']=2
 
+print(purse)
 
+#remove from dict
+del purse['comb']
+print(purse)
+
+print(purse['money'][0] , str(purse['money'][1]))
 
 
 
